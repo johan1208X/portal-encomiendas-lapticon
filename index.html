@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portal de Encomiendas Lapticon</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Portal de Encomiendas Lapticon</h1>
+
+  <!-- Bloque 1: Login -->
+  <section id="login-section" class="card">
+    <h2>Iniciar sesión</h2>
+    <form id="login-form">
+      <input type="email" id="login-email" placeholder="Correo" value="test30@gmail.com" required />
+      <input type="password" id="login-password" placeholder="Contraseña" required />
+      <button type="submit">Ingresar</button>
+    </form>
+    <p id="login-status" class="status"></p>
+  </section>
+
+  <!-- El resto de la app queda oculto hasta iniciar sesión -->
+  <section id="app-section" hidden>
+    <div class="card topbar">
+      <p id="welcome-message"></p>
+      <button type="button" id="logout-btn" class="secondary">Cerrar sesión</button>
+    </div>
+
+    <div class="card">
+      <!-- Bloque 2: Catálogo de ciudades -->
+      <h2>Ciudades</h2>
+      <div class="row">
+        <label>Origen
+          <select id="origen-select"></select>
+        </label>
+        <label>Destino
+          <select id="destino-select"></select>
+        </label>
+      </div>
+      <p id="ciudades-status" class="status"></p>
+
+      <!-- Bloque 3: Crear encomienda -->
+      <h2>Registrar encomienda</h2>
+      <form id="encomienda-form">
+        <input type="number" id="valor-input" placeholder="Valor" min="0" step="any" required />
+        <select id="moneda-select">
+          <option value="USD">USD</option>
+          <option value="COP">COP</option>
+        </select>
+        <input type="text" id="observaciones-input" placeholder="Observaciones" />
+        <button type="submit">Crear encomienda</button>
+      </form>
+      <p id="encomienda-status" class="status"></p>
+    </div>
+
+    <div class="card">
+      <!-- Bloque 4: Listar mis encomiendas -->
+      <div class="topbar">
+        <h2>Mis encomiendas</h2>
+        <button type="button" id="refresh-btn" class="secondary">Actualizar</button>
+      </div>
+      <p id="encomiendas-status" class="status"></p>
+      <div class="table-wrap">
+        <table id="encomiendas-table">
+          <thead>
+            <tr><th>Origen</th><th>Destino</th><th>Estado</th><th>Valor</th><th></th></tr>
+          </thead>
+          <tbody id="encomiendas-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
