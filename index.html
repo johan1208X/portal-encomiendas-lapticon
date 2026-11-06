@@ -9,6 +9,15 @@
 <body>
   <h1>Portal de Encomiendas Lapticon</h1>
 
+  <!-- Aviso de modo demo (lo controla mock-api.js) -->
+  <div id="demo-banner" class="demo-banner" role="status">
+    <span class="demo-texto"></span>
+    <span class="demo-botones">
+      <button type="button" id="demo-reset" class="secondary small" hidden>Reiniciar datos</button>
+      <button type="button" id="demo-toggle" class="small"></button>
+    </span>
+  </div>
+
   <!-- Bloque 1: Login -->
   <section id="login-section" class="card">
     <h2>Iniciar sesión</h2>
@@ -72,6 +81,7 @@
     </div>
   </section>
 
+  <script src="mock-api.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

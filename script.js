@@ -43,7 +43,7 @@ function mensajeDeError(data, res) {
 // "Failed to fetch" = el servidor no respondió o bloqueó la petición (red, CORS, servidor caído)
 function textoError(err) {
   if (err instanceof TypeError) {
-    return "no hay conexión con el servidor (puede estar caído o despertando). Intenta de nuevo en un momento.";
+    return "no hay conexión con el servidor (puede estar caído o despertando). Intenta de nuevo en un momento o activa el modo demo arriba.";
   }
   return err.message;
 }

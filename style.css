@@ -124,3 +124,27 @@ td.empty { text-align: center; color: var(--muted); padding: 24px; }
 .badge-en-transito, .badge-en_transito, .badge-aceptada { background: #e3edff; color: #2459c4; }
 .badge-entregada { background: #dcf5e6; color: var(--ok); }
 .badge-cancelada { background: #fde4e4; color: var(--danger); }
+
+/* Aviso de modo demo */
+.demo-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.demo-banner.on {
+  background: #fff4d6;
+  border-color: #f0c34a;
+  color: #6b4b00;
+  font-weight: 600;
+}
+.demo-texto { flex: 1 1 320px; }
+.demo-botones { display: flex; gap: 8px; }
